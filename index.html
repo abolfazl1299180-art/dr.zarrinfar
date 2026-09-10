@@ -3,78 +3,84 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#321448">
-<meta name="description" content="کارت ویزیت دیجیتال دکتر فرحناز زرین‌فر">
-<title>دکتر فرحناز زرین‌فر | کارت ویزیت دیجیتال</title>
+<meta name="theme-color" content="#241331">
+<meta name="description" content="هویت دیجیتال دکتر فرحناز زرین‌فر">
+<title>دکتر فرحناز زرین‌فر</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
-:root{--purple:#35134a;--purple2:#5b2b79;--cream:#fffaf5;--gold:#c9a15c;--gold2:#ecd39d;--ink:#291b32}
-*{box-sizing:border-box}
-html,body{margin:0;width:100%;height:100%;font-family:Vazirmatn,Tahoma,sans-serif}
-body{display:grid;place-items:center;overflow:hidden;background:linear-gradient(135deg,#f8eefb,#fff,#f1e3f6)}
-.stage{width:100%;height:100%;display:grid;place-items:center;padding:16px}
-.scene{width:min(1100px,calc(100vw - 32px));height:min(550px,calc((100vw - 32px)/2));min-height:250px;max-height:72vh;perspective:2200px}
-.card{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.2,.8,.15,1);cursor:pointer}
-.card.is-back{transform:rotateY(180deg)}
-.face{position:absolute;inset:0;backface-visibility:hidden;overflow:hidden;border-radius:24px;border:2px solid var(--gold);box-shadow:inset 0 0 0 1px rgba(255,255,255,.15),0 28px 60px rgba(51,20,72,.2)}
-.front{background:linear-gradient(120deg,#271037 0%,#43205c 52%,#6b3d8e 100%);color:#fff;padding:54px 64px}
-.front:after{content:"";position:absolute;inset:12px;border:1px solid rgba(236,211,157,.4);border-radius:17px;pointer-events:none}
-.front-layout{position:relative;z-index:2;width:100%;height:100%;display:grid;grid-template-columns:34% 66%;align-items:center;direction:ltr}
-.mark{display:flex;align-items:center;justify-content:center}
-.mark-ring{width:178px;height:178px;border-radius:50%;border:1px solid var(--gold2);display:grid;place-items:center;position:relative;background:rgba(255,255,255,.025)}
-.mark-ring:before,.mark-ring:after{content:"";position:absolute;border:1px solid rgba(236,211,157,.3);border-radius:50%}.mark-ring:before{inset:15px}.mark-ring:after{inset:31px}
-.mark-text{font-size:42px;font-weight:900;color:var(--gold2)}
-.info{direction:rtl;text-align:right;padding-right:10px}
-.small{font-size:12px;color:var(--gold2);font-weight:700;margin-bottom:8px}
-h1{font-size:43px;line-height:1.35;margin:0;color:#fff;font-weight:900;letter-spacing:-1px}
-.role{font-size:17px;line-height:2;color:#f7effb;margin-top:13px}
-.rule{width:220px;height:1px;background:linear-gradient(90deg,var(--gold2),transparent);margin:19px 0 12px}
-.credentials{font-size:12.5px;line-height:2;color:#f1dfbc}
-.back{transform:rotateY(180deg);background:var(--cream);padding:43px 52px;color:var(--ink)}
-.back:after{content:"";position:absolute;inset:12px;border:1px solid rgba(201,161,92,.45);border-radius:17px;pointer-events:none}
-.back-layout{position:relative;z-index:2;height:100%;display:grid;grid-template-columns:1fr 31%;align-items:center}
-.left h2{margin:0;font-size:28px;color:var(--purple);font-weight:900}.left p{margin:5px 0 18px;font-size:11px;color:#8a7293;font-weight:700}
-.services{display:grid;grid-template-columns:1fr 1fr;gap:10px}.service{padding:12px 13px;border:1px solid rgba(91,43,121,.14);border-radius:12px;background:#fff;box-shadow:0 8px 20px rgba(51,20,72,.05)}.service strong{display:block;color:var(--purple2);font-size:11px;margin-bottom:3px}.service span{font-size:9.5px;color:#5d5062;line-height:1.7}
-.contact{height:100%;border-right:1px solid rgba(201,161,92,.5);display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding-right:24px}.contact-title{font-size:10px;color:#7c6a84}.phone{direction:ltr;font-size:28px;font-weight:900;color:var(--purple);margin-top:7px;letter-spacing:.02em}.buttons{display:flex;gap:8px;margin-top:14px}.btn{font:800 10px Vazirmatn;border-radius:10px;padding:9px 13px;text-decoration:none;border:1px solid rgba(91,43,121,.18);cursor:pointer}.call{background:var(--purple);color:#fff}.copy{background:#fff;color:var(--purple)}
-.hint{position:absolute;z-index:3;left:28px;bottom:20px;color:rgba(255,255,255,.6);font-size:9px}.corner{position:absolute;width:85px;height:85px;border:1px solid rgba(236,211,157,.18);border-radius:50%;right:-42px;top:-42px}
-.actions{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:7px}.action{width:38px;height:38px;border-radius:50%;border:1px solid rgba(201,161,92,.6);background:#fff;color:var(--purple);cursor:pointer;font-size:15px}
-@media(max-width:700px){.stage{padding:10px}.scene{width:calc(100vw - 20px);height:calc((100vw - 20px)/1.9);min-height:0;max-height:none}.face{border-radius:16px}.front{padding:25px 28px}.front-layout{grid-template-columns:29% 71%}.mark-ring{width:105px;height:105px}.mark-text{font-size:25px}.mark-ring:before{inset:9px}.mark-ring:after{inset:19px}h1{font-size:25px}.role{font-size:10px}.small{font-size:8px}.rule{width:130px;margin:10px 0 7px}.credentials{font-size:8px}.back{padding:19px 22px}.back-layout{grid-template-columns:1fr 30%}.left h2{font-size:17px}.left p{font-size:7px;margin-bottom:9px}.services{gap:5px}.service{padding:7px 8px;border-radius:8px}.service strong{font-size:7.5px}.service span{font-size:6.3px}.contact{padding-right:11px}.contact-title{font-size:6.5px}.phone{font-size:14px}.btn{font-size:6px;padding:6px 8px}.hint{font-size:6px;left:15px;bottom:10px}.actions{bottom:10px}.action{width:34px;height:34px}}
+:root{--violet:#241331;--violet2:#3a1e50;--violet3:#6d4387;--cream:#fbf5ee;--white:#fff;--gold:#c8a15a;--gold2:#ead29b;--ink:#23172b;--muted:#76677d}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;font-family:Vazirmatn,Tahoma,sans-serif}body{overflow:hidden;background:radial-gradient(circle at 18% 20%,rgba(133,85,164,.2),transparent 24%),radial-gradient(circle at 84% 78%,rgba(200,161,90,.12),transparent 20%),linear-gradient(135deg,#f5edf8 0%,#fff 48%,#efe1f4 100%);color:var(--ink)}
+.shell{width:100%;height:100%;display:grid;place-items:center;padding:24px}.viewport{width:min(1180px,94vw);height:min(620px,82vh);min-height:420px;perspective:2200px}.identity{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.18,.75,.16,1);cursor:pointer}.identity.backside{transform:rotateY(180deg)}
+.panel{position:absolute;inset:0;backface-visibility:hidden;overflow:hidden}.panel.front{background:linear-gradient(110deg,#241331 0%,#321744 52%,#4b2661 100%);color:#fff}.panel.back{transform:rotateY(180deg);background:linear-gradient(115deg,#fffdfb 0%,#fbf7f2 55%,#f2e6f5 100%)}
+.panel:before{content:"";position:absolute;inset:20px;border:1px solid rgba(200,161,90,.5);pointer-events:none}.panel:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 0%,transparent 44%,rgba(255,255,255,.07) 50%,transparent 56%,transparent 100%);background-size:220% 100%;animation:sheen 9s linear infinite;pointer-events:none}
+.front-grid{height:100%;position:relative;display:grid;grid-template-columns:34% 66%;direction:ltr}.symbol-zone{position:relative;display:grid;place-items:center;border-right:1px solid rgba(200,161,90,.26)}.symbol-ring{width:230px;height:230px;border:1px solid var(--gold2);border-radius:50%;display:grid;place-items:center;position:relative}.symbol-ring:before,.symbol-ring:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(234,210,155,.25)}.symbol-ring:before{inset:20px}.symbol-ring:after{inset:42px}.monogram{font-size:66px;font-weight:900;color:#fff;letter-spacing:-6px}.tiny-gold{position:absolute;bottom:54px;left:0;right:0;text-align:center;color:rgba(234,210,155,.75);font-size:10px;letter-spacing:.2em;font-family:"Playfair Display",serif;direction:ltr}
+.content{direction:rtl;display:flex;flex-direction:column;justify-content:center;padding:60px 78px;position:relative}.kicker{color:var(--gold2);font-size:15px;font-weight:800;margin-bottom:18px}.name{font-size:clamp(36px,5vw,64px);line-height:1.35;margin:0;font-weight:900;color:#fff}.title{font-size:clamp(18px,2vw,25px);line-height:1.8;margin-top:18px;color:#f4ecf7}.rule{width:170px;height:1px;background:var(--gold2);margin:26px 0 18px}.credentials{font-size:15px;line-height:2.1;color:#f0dfb9}.founder{font-size:15px;line-height:2;color:#fff;margin-top:10px}.founder span{color:var(--gold2)}
+.flip-hint{position:absolute;right:70px;bottom:44px;display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.66);font-size:11px}.flip-dot{width:28px;height:28px;border:1px solid var(--gold2);border-radius:50%;display:grid;place-items:center;color:var(--gold2)}
+.back-grid{height:100%;position:relative;display:grid;grid-template-columns:58% 42%;direction:ltr}.back-info{direction:rtl;padding:66px 70px;display:flex;flex-direction:column;justify-content:center}.back-heading{font-size:36px;font-weight:900;margin:0;color:var(--ink)}.back-line{font-size:14px;color:#6d5876;margin-top:8px}.areas{display:grid;grid-template-columns:1fr 1fr;gap:0 38px;margin-top:34px;max-width:650px}.area{padding:14px 0;border-bottom:1px solid rgba(200,161,90,.3)}.area b{font-size:14px;color:#4e2864}.area span{display:block;font-size:11px;line-height:1.8;color:#65596a;margin-top:3px}
+.contact{direction:rtl;border-right:1px solid rgba(200,161,90,.34);display:flex;flex-direction:column;justify-content:center;padding:60px 58px}.contact-label{font-size:12px;color:var(--muted)}.phone{direction:ltr;font-family:"Playfair Display",serif;font-size:35px;color:#4b2361;margin:10px 0 22px;font-weight:700}.contact-actions{display:flex;gap:10px}.action{appearance:none;border:1px solid rgba(200,161,90,.6);padding:11px 20px;border-radius:999px;font:800 12px Vazirmatn;cursor:pointer;text-decoration:none}.call{background:#4d2564;color:#fff}.copy{background:transparent;color:#4d2564}.back-note{font-size:11px;color:#89748f;line-height:1.9;margin-top:28px}
+.center-controls{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);display:flex;gap:9px;z-index:20}.circle-btn{width:42px;height:42px;border-radius:50%;border:1px solid rgba(200,161,90,.55);background:rgba(255,255,255,.86);color:#542b6d;backdrop-filter:blur(12px);cursor:pointer;font-size:17px}.circle-btn:active{transform:scale(.96)}
+@keyframes sheen{0%{background-position:180% 0}100%{background-position:-40% 0}}
+@media(max-width:760px){.shell{padding:14px}.viewport{height:min(500px,76vh);min-height:340px;width:95vw}.front-grid,.back-grid{grid-template-columns:1fr}.symbol-zone{display:none}.content{padding:36px}.name{font-size:34px}.title{font-size:15px}.credentials,.founder{font-size:11px}.flip-hint{right:36px;bottom:24px}.back-info{padding:32px}.contact{border-right:0;border-top:1px solid rgba(200,161,90,.34);padding:24px 32px;flex-direction:row;align-items:center;gap:28px}.back-heading{font-size:25px}.areas{margin-top:20px;gap:0 20px}.area{padding:9px 0}.phone{font-size:23px;margin:3px 0 10px}.back-note{display:none}}
+@media(max-width:470px){.viewport{height:72vh;min-height:300px}.content{padding:28px}.name{font-size:27px}.title{font-size:13px}.credentials,.founder{font-size:9.5px}.flip-hint{font-size:8px;right:28px;bottom:18px}.circle-btn{width:38px;height:38px}.back-info{padding:25px}.back-heading{font-size:20px}.back-line{font-size:10px}.area b{font-size:10px}.area span{font-size:8px}.contact{padding:17px 24px;gap:15px}.contact-label{font-size:9px}.phone{font-size:17px}.action{padding:8px 11px;font-size:9px}}
 </style>
 </head>
 <body>
-<div class="stage"><div class="scene">
-<section class="card" id="card" tabindex="0" aria-label="کارت ویزیت دیجیتال">
-<div class="face front">
-<div class="corner"></div>
-<div class="front-layout">
-<div class="mark"><div class="mark-ring"><div class="mark-text">دز</div></div></div>
-<div class="info"><div class="small">دکتر فرحناز زرین‌فر</div><h1>بنیانگذار و مدیرعامل<br>هلدینگ دکتر زرین‌فر</h1><div class="role">فوق‌دکترا مدیریت کسب‌وکار · دکترای حرفه‌ای مشاوره خانواده</div><div class="rule"></div><div class="credentials">طب معنوی | معجزه لوگوتراپی<br>بنیانگذار طرح «بانوی سرنوشت‌ساز»</div></div>
-</div><div class="hint">برای چرخش کارت لمس کنید</div>
-</div>
-<div class="face back">
-<div class="back-layout">
-<div class="left"><h2>دکتر فرحناز زرین‌فر</h2><p>مشاوره · رشد فردی · توانمندسازی</p><div class="services">
-<div class="service"><strong>استعدادیابی</strong><span>استعدادیابی و رشد فردی</span></div>
-<div class="service"><strong>مشاوره خانواده</strong><span>مشاوره و همراهی خانواده</span></div>
-<div class="service"><strong>بانوی سرنوشت‌ساز</strong><span>توانمندسازی بانوان</span></div>
-<div class="service"><strong>کودکان و نوجوانان</strong><span>آموزش و توانمندسازی</span></div>
-<div class="service"><strong>کارآفرینی بانوان</strong><span>رشد مهارت و توسعه فردی</span></div>
-<div class="service"><strong>تخصص</strong><span>طب معنوی و معجزه لوگوتراپی</span></div>
-</div></div>
-<div class="contact"><div class="contact-title">تماس مستقیم</div><div class="phone">09190648767</div><div class="buttons"><a class="btn call" href="tel:09190648767">تماس</a><button class="btn copy" id="copy">کپی شماره</button></div></div>
-</div>
-</div>
-</section></div></div>
-<div class="actions"><button class="action" id="flip" aria-label="چرخش">↻</button><button class="action" id="share" aria-label="اشتراک گذاری">⌯</button></div>
+<main class="shell">
+ <div class="viewport" aria-label="هویت دیجیتال دکتر فرحناز زرین‌فر">
+  <section class="identity" id="identity" tabindex="0">
+   <article class="panel front">
+    <div class="front-grid">
+      <div class="symbol-zone"><div class="symbol-ring"><div class="monogram">دز</div></div><div class="tiny-gold">ZARRINFAR</div></div>
+      <div class="content">
+        <div class="kicker">دکتر فرحناز زرین‌فر</div>
+        <h1 class="name">بنیانگذار و مدیرعامل<br>هلدینگ دکتر زرین‌فر</h1>
+        <div class="title">فوق‌دکترا مدیریت کسب‌وکار · دکترای حرفه‌ای مشاوره خانواده</div>
+        <div class="rule"></div>
+        <div class="credentials">طب معنوی · معجزه لوگوتراپی</div>
+        <div class="founder">بنیانگذار طرح <span>«بانوی سرنوشت‌ساز»</span></div>
+      </div>
+    </div>
+    <div class="flip-hint"><span class="flip-dot">↻</span><span>برای دیدن اطلاعات بیشتر، صفحه را بچرخانید</span></div>
+   </article>
+   <article class="panel back">
+    <div class="back-grid">
+      <div class="back-info">
+        <h2 class="back-heading">حوزه‌های فعالیت</h2>
+        <div class="back-line">مسیرهای حرفه‌ای و خدمات تخصصی</div>
+        <div class="areas">
+          <div class="area"><b>استعدادیابی</b><span>شناخت استعداد و طراحی مسیر رشد</span></div>
+          <div class="area"><b>مشاوره خانواده</b><span>مشاوره و همراهی در مسیر زندگی</span></div>
+          <div class="area"><b>بانوی سرنوشت‌ساز</b><span>توانمندسازی و توسعه فردی بانوان</span></div>
+          <div class="area"><b>رشد کودکان و نوجوانان</b><span>آموزش، رشد و توانمندسازی</span></div>
+          <div class="area"><b>کارآفرینی بانوان</b><span>مهارت‌آموزی و توسعه مسیر حرفه‌ای</span></div>
+          <div class="area"><b>طب معنوی</b><span>رویکرد معنوی و معجزه لوگوتراپی</span></div>
+        </div>
+      </div>
+      <aside class="contact">
+        <div class="contact-label">تماس مستقیم</div>
+        <div class="phone">09190648767</div>
+        <div class="contact-actions"><a class="action call" href="tel:09190648767">تماس</a><button class="action copy" id="copy">کپی شماره</button></div>
+        <div class="back-note">با یک لمس می‌توانید به صفحه اصلی بازگردید.</div>
+      </aside>
+    </div>
+   </article>
+  </section>
+ </div>
+</main>
+<div class="center-controls"><button class="circle-btn" id="flip" aria-label="چرخش">↻</button><button class="circle-btn" id="share" aria-label="اشتراک‌گذاری">⌁</button></div>
 <script>
-const card=document.getElementById('card'),flip=document.getElementById('flip'),copy=document.getElementById('copy'),share=document.getElementById('share');
-const toggle=()=>card.classList.toggle('is-back');
-card.addEventListener('click',e=>{if(!e.target.closest('a,button'))toggle()});
-card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}});
-flip.onclick=e=>{e.stopPropagation();toggle()};
-copy.onclick=async e=>{e.stopPropagation();try{await navigator.clipboard.writeText('09190648767');copy.textContent='✓';setTimeout(()=>copy.textContent='کپی شماره',1200)}catch{}};
-share.onclick=async e=>{e.stopPropagation();try{await navigator.share({title:'دکتر فرحناز زرین‌فر',text:'کارت ویزیت دیجیتال دکتر فرحناز زرین‌فر',url:location.href})}catch{try{await navigator.clipboard.writeText(location.href);share.textContent='✓';setTimeout(()=>share.textContent='⌯',1200)}catch{}}};
+const identity=document.getElementById('identity');
+const flip=document.getElementById('flip');
+const copy=document.getElementById('copy');
+const share=document.getElementById('share');
+const toggle=()=>identity.classList.toggle('backside');
+identity.addEventListener('click',e=>{if(!e.target.closest('a,button'))toggle()});
+identity.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}});
+flip.addEventListener('click',e=>{e.stopPropagation();toggle()});
+copy.addEventListener('click',async e=>{e.stopPropagation();try{await navigator.clipboard.writeText('09190648767');copy.textContent='کپی شد';setTimeout(()=>copy.textContent='کپی شماره',1300)}catch{copy.textContent='09190648767'}});
+share.addEventListener('click',async e=>{e.stopPropagation();try{await navigator.share({title:'دکتر فرحناز زرین‌فر',text:'هویت دیجیتال دکتر فرحناز زرین‌فر',url:location.href})}catch{try{await navigator.clipboard.writeText(location.href);share.textContent='✓';setTimeout(()=>share.textContent='⌁',1300)}catch{}}});
 </script>
-</body></html>
+</body>
+</html>
