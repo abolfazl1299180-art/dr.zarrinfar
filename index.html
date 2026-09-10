@@ -3,143 +3,78 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#24102f">
+<meta name="theme-color" content="#321448">
 <meta name="description" content="کارت ویزیت دیجیتال دکتر فرحناز زرین‌فر">
 <title>دکتر فرحناز زرین‌فر | کارت ویزیت دیجیتال</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{
- --violet:#321448;--violet2:#52246d;--violet3:#74409a;
- --cream:#fffaf4;--white:#fff;--gold:#caa45f;--gold2:#f0d7a1;
- --ink:#26192f;--muted:#75677d;
-}
+:root{--purple:#35134a;--purple2:#5b2b79;--cream:#fffaf5;--gold:#c9a15c;--gold2:#ecd39d;--ink:#291b32}
 *{box-sizing:border-box}
-html,body{margin:0;width:100%;min-height:100%;font-family:Vazirmatn,Tahoma,sans-serif}
-body{
- min-height:100svh;display:grid;place-items:center;overflow:hidden;
- background:
- radial-gradient(circle at 15% 18%,rgba(125,70,158,.18),transparent 25%),
- radial-gradient(circle at 86% 84%,rgba(202,164,95,.14),transparent 22%),
- linear-gradient(140deg,#f8f1fb 0%,#fff 48%,#f0e5f6 100%);
-}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(rgba(50,20,72,.25) .7px,transparent .7px);background-size:30px 30px}
-.stage{width:100%;min-height:100svh;display:grid;place-items:center;padding:18px}
-.scene{width:min(94vw,1040px);perspective:2400px}
-.card{
- width:100%;aspect-ratio:2/1;position:relative;transform-style:preserve-3d;
- transition:transform 1.05s cubic-bezier(.2,.78,.16,1);cursor:pointer;
- filter:drop-shadow(0 32px 36px rgba(47,23,62,.20));
-}
+html,body{margin:0;width:100%;height:100%;font-family:Vazirmatn,Tahoma,sans-serif}
+body{display:grid;place-items:center;overflow:hidden;background:linear-gradient(135deg,#f8eefb,#fff,#f1e3f6)}
+.stage{width:100%;height:100%;display:grid;place-items:center;padding:16px}
+.scene{width:min(1100px,calc(100vw - 32px));height:min(550px,calc((100vw - 32px)/2));min-height:250px;max-height:72vh;perspective:2200px}
+.card{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.2,.8,.15,1);cursor:pointer}
 .card.is-back{transform:rotateY(180deg)}
-.face{
- position:absolute;inset:0;backface-visibility:hidden;overflow:hidden;
- border-radius:28px;border:1.5px solid var(--gold);
- box-shadow:inset 0 0 0 1px rgba(255,255,255,.13),inset 0 0 0 9px rgba(255,255,255,.035);
-}
-.face:before{content:"";position:absolute;inset:11px;border:1px solid rgba(240,215,161,.46);border-radius:20px;pointer-events:none}
-.front{
- color:#fff;padding:52px 62px;
- background:
- radial-gradient(circle at 80% 20%,rgba(240,215,161,.13),transparent 18%),
- radial-gradient(circle at 15% 95%,rgba(154,91,190,.19),transparent 22%),
- linear-gradient(116deg,#2a103d 0%,#43205b 48%,#6d4091 100%);
-}
-.back{transform:rotateY(180deg);padding:42px 50px;color:var(--ink);background:linear-gradient(118deg,#fff,#fbf7ff 58%,#f6edf9)}
-.gloss{position:absolute;inset:-70%;background:linear-gradient(112deg,transparent 43%,rgba(255,255,255,.13) 50%,transparent 57%);animation:gloss 8s ease-in-out infinite;pointer-events:none}
-.ornament{position:absolute;border:1px solid rgba(240,215,161,.19);border-radius:50%;pointer-events:none}.o1{width:360px;height:360px;right:-200px;top:-200px}.o2{width:240px;height:240px;left:-150px;bottom:-150px}.spark{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--gold2);box-shadow:0 0 14px var(--gold2);animation:twinkle 3s ease-in-out infinite}.s1{right:13%;top:28%}.s2{left:19%;bottom:24%;animation-delay:1s}.s3{right:28%;bottom:19%;animation-delay:1.8s}
-.front-inner{position:relative;z-index:3;height:100%;display:grid;grid-template-columns:250px 1fr;gap:60px;align-items:center;direction:ltr}
-.emblem{width:172px;height:172px;border-radius:50%;border:1px solid var(--gold2);display:grid;place-items:center;position:relative;background:radial-gradient(circle at 40% 35%,rgba(255,255,255,.10),rgba(255,255,255,.025) 55%,rgba(0,0,0,.12));box-shadow:0 0 0 10px rgba(240,215,161,.045),0 0 50px rgba(240,215,161,.09),inset 0 0 28px rgba(255,255,255,.05)}
-.emblem:before,.emblem:after{content:"";position:absolute;border:1px solid rgba(240,215,161,.26);border-radius:50%}.emblem:before{inset:16px}.emblem:after{inset:30px}
-.emblem span{direction:rtl;font-size:40px;font-weight:900;color:var(--gold2);letter-spacing:-2px}
-.identity{direction:rtl;position:relative}
-.eyebrow{font-size:13px;color:var(--gold2);font-weight:800;margin-bottom:9px}
-.name{font-size:38px;line-height:1.38;margin:0;font-weight:900;letter-spacing:-.6px;color:#fff}
-.role{margin-top:12px;font-size:16px;line-height:2;color:#f6effb}
-.gold-rule{width:210px;height:1px;background:linear-gradient(90deg,var(--gold2),transparent);margin:18px 0 13px}
-.credentials{font-size:12px;line-height:2;color:#f5dfb4}
-.micro{position:absolute;left:0;top:0;direction:ltr;font-family:"Playfair Display",serif;font-size:11px;letter-spacing:.18em;color:rgba(255,255,255,.52)}
-.flip-tip{position:absolute;z-index:4;bottom:24px;left:32px;display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.64);font-size:10px}.flip-tip i{width:23px;height:23px;border:1px solid rgba(240,215,161,.65);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-style:normal;animation:pulse 2s infinite}
-.back-inner{position:relative;z-index:3;height:100%;display:grid;grid-template-columns:1fr 280px;gap:36px;align-items:center}
-.back-left{min-width:0}.back-title{font-size:27px;font-weight:900;margin:0;color:var(--ink)}.back-sub{font-size:11px;color:#7d5b8f;font-weight:800;margin-top:5px}
-.services{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}.service{padding:11px 13px;border-radius:14px;border:1px solid rgba(93,46,119,.11);background:rgba(255,255,255,.74);box-shadow:0 9px 22px rgba(63,35,80,.045)}.service b{display:block;font-size:10.5px;color:#683a8a;margin-bottom:3px}.service span{font-size:9.6px;line-height:1.7;color:#514657}
-.contact-box{height:100%;border-right:1px solid rgba(202,164,95,.42);display:flex;flex-direction:column;align-items:center;justify-content:center;padding-right:30px;text-align:center}.seal{width:82px;height:82px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-size:25px;box-shadow:0 0 0 7px rgba(202,164,95,.055);background:#fff}.contact-label{font-size:9px;color:var(--muted);margin-top:15px}.phone{direction:ltr;font-size:25px;font-weight:900;color:#4f2872;margin-top:4px;letter-spacing:.03em}.actions{display:flex;gap:8px;margin-top:14px}.btn{font-family:inherit;font-size:10px;font-weight:800;border-radius:12px;padding:10px 15px;text-decoration:none;cursor:pointer}.primary{color:#fff;background:linear-gradient(135deg,#714095,#4e236d);border:0}.secondary{color:#4e236d;background:#fff;border:1px solid rgba(78,35,109,.15)}
-.controls{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}.control{width:44px;height:44px;border-radius:50%;border:1px solid rgba(202,164,95,.55);background:rgba(255,255,255,.86);backdrop-filter:blur(10px);color:#5a3177;font-family:inherit;font-size:17px;cursor:pointer;box-shadow:0 9px 24px rgba(66,34,86,.10)}.control.share{font-size:15px}.control:hover{transform:translateY(-2px)}
-@keyframes gloss{0%,24%{transform:translateX(-70%) rotate(7deg)}72%,100%{transform:translateX(70%) rotate(7deg)}}
-@keyframes twinkle{0%,100%{opacity:.22;transform:scale(.7)}50%{opacity:1;transform:scale(1.25)}}
-@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(240,215,161,.06)}}
-@media(max-width:800px){
- .stage{padding:12px}.scene{width:95vw}.card{aspect-ratio:1.85/1}.front{padding:26px 28px}.front-inner{grid-template-columns:130px 1fr;gap:28px}.emblem{width:100px;height:100px}.emblem span{font-size:27px}.name{font-size:25px}.role{font-size:11px;margin-top:8px}.eyebrow{font-size:9px}.gold-rule{margin:10px 0;width:140px}.credentials{font-size:8px}.micro{font-size:7px}.flip-tip{bottom:16px;left:20px;font-size:7px}.flip-tip i{width:18px;height:18px;font-size:10px}
- .back{padding:21px 24px}.back-inner{grid-template-columns:1fr 190px;gap:20px}.back-title{font-size:18px}.back-sub{font-size:8px}.services{gap:5px;margin-top:10px}.service{padding:7px 8px}.service b{font-size:8px}.service span{font-size:7px}.contact-box{padding-right:18px}.seal{width:54px;height:54px;font-size:18px}.contact-label{font-size:7px;margin-top:10px}.phone{font-size:14px}.btn{padding:7px 9px;font-size:7px;border-radius:9px}.controls{bottom:12px}.control{width:38px;height:38px;font-size:14px}
-}
-@media(max-width:520px){
- .card{aspect-ratio:1.78/1}.front{padding:19px 20px}.front-inner{grid-template-columns:75px 1fr;gap:16px}.emblem{width:61px;height:61px;border-radius:50%}.emblem:before{inset:8px}.emblem:after{inset:15px}.emblem span{font-size:18px}.name{font-size:18px;line-height:1.48}.role{font-size:8.2px;line-height:1.8}.eyebrow{font-size:7px}.gold-rule{margin:8px 0 6px;width:100px}.credentials{font-size:6.8px;line-height:1.8}.micro{font-size:5px}.flip-tip{bottom:12px;left:16px;font-size:5.5px}.flip-tip i{width:15px;height:15px;font-size:8px}
- .back{padding:15px 16px}.back-inner{grid-template-columns:1fr 112px;gap:10px}.back-title{font-size:13px}.back-sub{font-size:6.5px}.services{gap:4px;margin-top:7px}.service{padding:5px 5px;border-radius:8px}.service b{font-size:6.7px}.service span{font-size:5.7px;line-height:1.5}.contact-box{padding-right:9px}.seal{width:34px;height:34px;font-size:12px}.contact-label{font-size:5.5px;margin-top:6px}.phone{font-size:9px}.actions{gap:4px;margin-top:7px}.btn{padding:5px 6px;font-size:5.6px;border-radius:7px}.control{width:34px;height:34px;font-size:12px}
-}
+.face{position:absolute;inset:0;backface-visibility:hidden;overflow:hidden;border-radius:24px;border:2px solid var(--gold);box-shadow:inset 0 0 0 1px rgba(255,255,255,.15),0 28px 60px rgba(51,20,72,.2)}
+.front{background:linear-gradient(120deg,#271037 0%,#43205c 52%,#6b3d8e 100%);color:#fff;padding:54px 64px}
+.front:after{content:"";position:absolute;inset:12px;border:1px solid rgba(236,211,157,.4);border-radius:17px;pointer-events:none}
+.front-layout{position:relative;z-index:2;width:100%;height:100%;display:grid;grid-template-columns:34% 66%;align-items:center;direction:ltr}
+.mark{display:flex;align-items:center;justify-content:center}
+.mark-ring{width:178px;height:178px;border-radius:50%;border:1px solid var(--gold2);display:grid;place-items:center;position:relative;background:rgba(255,255,255,.025)}
+.mark-ring:before,.mark-ring:after{content:"";position:absolute;border:1px solid rgba(236,211,157,.3);border-radius:50%}.mark-ring:before{inset:15px}.mark-ring:after{inset:31px}
+.mark-text{font-size:42px;font-weight:900;color:var(--gold2)}
+.info{direction:rtl;text-align:right;padding-right:10px}
+.small{font-size:12px;color:var(--gold2);font-weight:700;margin-bottom:8px}
+h1{font-size:43px;line-height:1.35;margin:0;color:#fff;font-weight:900;letter-spacing:-1px}
+.role{font-size:17px;line-height:2;color:#f7effb;margin-top:13px}
+.rule{width:220px;height:1px;background:linear-gradient(90deg,var(--gold2),transparent);margin:19px 0 12px}
+.credentials{font-size:12.5px;line-height:2;color:#f1dfbc}
+.back{transform:rotateY(180deg);background:var(--cream);padding:43px 52px;color:var(--ink)}
+.back:after{content:"";position:absolute;inset:12px;border:1px solid rgba(201,161,92,.45);border-radius:17px;pointer-events:none}
+.back-layout{position:relative;z-index:2;height:100%;display:grid;grid-template-columns:1fr 31%;align-items:center}
+.left h2{margin:0;font-size:28px;color:var(--purple);font-weight:900}.left p{margin:5px 0 18px;font-size:11px;color:#8a7293;font-weight:700}
+.services{display:grid;grid-template-columns:1fr 1fr;gap:10px}.service{padding:12px 13px;border:1px solid rgba(91,43,121,.14);border-radius:12px;background:#fff;box-shadow:0 8px 20px rgba(51,20,72,.05)}.service strong{display:block;color:var(--purple2);font-size:11px;margin-bottom:3px}.service span{font-size:9.5px;color:#5d5062;line-height:1.7}
+.contact{height:100%;border-right:1px solid rgba(201,161,92,.5);display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding-right:24px}.contact-title{font-size:10px;color:#7c6a84}.phone{direction:ltr;font-size:28px;font-weight:900;color:var(--purple);margin-top:7px;letter-spacing:.02em}.buttons{display:flex;gap:8px;margin-top:14px}.btn{font:800 10px Vazirmatn;border-radius:10px;padding:9px 13px;text-decoration:none;border:1px solid rgba(91,43,121,.18);cursor:pointer}.call{background:var(--purple);color:#fff}.copy{background:#fff;color:var(--purple)}
+.hint{position:absolute;z-index:3;left:28px;bottom:20px;color:rgba(255,255,255,.6);font-size:9px}.corner{position:absolute;width:85px;height:85px;border:1px solid rgba(236,211,157,.18);border-radius:50%;right:-42px;top:-42px}
+.actions{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:7px}.action{width:38px;height:38px;border-radius:50%;border:1px solid rgba(201,161,92,.6);background:#fff;color:var(--purple);cursor:pointer;font-size:15px}
+@media(max-width:700px){.stage{padding:10px}.scene{width:calc(100vw - 20px);height:calc((100vw - 20px)/1.9);min-height:0;max-height:none}.face{border-radius:16px}.front{padding:25px 28px}.front-layout{grid-template-columns:29% 71%}.mark-ring{width:105px;height:105px}.mark-text{font-size:25px}.mark-ring:before{inset:9px}.mark-ring:after{inset:19px}h1{font-size:25px}.role{font-size:10px}.small{font-size:8px}.rule{width:130px;margin:10px 0 7px}.credentials{font-size:8px}.back{padding:19px 22px}.back-layout{grid-template-columns:1fr 30%}.left h2{font-size:17px}.left p{font-size:7px;margin-bottom:9px}.services{gap:5px}.service{padding:7px 8px;border-radius:8px}.service strong{font-size:7.5px}.service span{font-size:6.3px}.contact{padding-right:11px}.contact-title{font-size:6.5px}.phone{font-size:14px}.btn{font-size:6px;padding:6px 8px}.hint{font-size:6px;left:15px;bottom:10px}.actions{bottom:10px}.action{width:34px;height:34px}}
 </style>
 </head>
 <body>
-<div class="stage">
- <div class="scene">
-  <section class="card" id="card" tabindex="0" aria-label="کارت ویزیت دیجیتال؛ برای چرخش لمس کنید">
-   <div class="face front">
-    <div class="gloss"></div><div class="ornament o1"></div><div class="ornament o2"></div>
-    <span class="spark s1"></span><span class="spark s2"></span><span class="spark s3"></span>
-    <div class="front-inner">
-      <div class="emblem"><span>دز</span></div>
-      <div class="identity">
-       <div class="micro">DIGITAL BUSINESS CARD</div>
-       <div class="eyebrow">دکتر فرحناز زرین‌فر</div>
-       <h1 class="name">بنیانگذار و مدیرعامل<br>هلدینگ دکتر زرین‌فر</h1>
-       <div class="role">فوق‌دکترا مدیریت کسب‌وکار · دکترای حرفه‌ای مشاوره خانواده</div>
-       <div class="gold-rule"></div>
-       <div class="credentials">طب معنوی · معجزه لوگوتراپی<br>بنیانگذار طرح «بانوی سرنوشت‌ساز»</div>
-      </div>
-    </div>
-    <div class="flip-tip"><i>↻</i><span>برای مشاهده پشت کارت لمس کنید</span></div>
-   </div>
-
-   <div class="face back">
-    <div class="back-inner">
-      <div class="back-left">
-       <h2 class="back-title">هلدینگ دکتر زرین‌فر</h2>
-       <div class="back-sub">رشد فردی · مشاوره · توانمندسازی</div>
-       <div class="services">
-        <div class="service"><b>استعدادیابی</b><span>استعدادیابی و رشد فردی</span></div>
-        <div class="service"><b>مشاوره خانواده</b><span>مشاوره و همراهی خانواده</span></div>
-        <div class="service"><b>بانوی سرنوشت‌ساز</b><span>توانمندسازی و مسیر رشد بانوان</span></div>
-        <div class="service"><b>کودکان و نوجوانان</b><span>آموزش و توانمندسازی</span></div>
-        <div class="service"><b>کارآفرینی بانوان</b><span>رشد مهارت و توسعه فردی</span></div>
-        <div class="service"><b>تخصص</b><span>طب معنوی و معجزه لوگوتراپی</span></div>
-       </div>
-      </div>
-      <div class="contact-box">
-       <div class="seal">✦</div>
-       <div class="contact-label">تماس مستقیم</div>
-       <div class="phone">09190648767</div>
-       <div class="actions"><a class="btn primary" href="tel:09190648767">تماس</a><button class="btn secondary" id="copy">کپی شماره</button></div>
-      </div>
-    </div>
-   </div>
-  </section>
- </div>
+<div class="stage"><div class="scene">
+<section class="card" id="card" tabindex="0" aria-label="کارت ویزیت دیجیتال">
+<div class="face front">
+<div class="corner"></div>
+<div class="front-layout">
+<div class="mark"><div class="mark-ring"><div class="mark-text">دز</div></div></div>
+<div class="info"><div class="small">دکتر فرحناز زرین‌فر</div><h1>بنیانگذار و مدیرعامل<br>هلدینگ دکتر زرین‌فر</h1><div class="role">فوق‌دکترا مدیریت کسب‌وکار · دکترای حرفه‌ای مشاوره خانواده</div><div class="rule"></div><div class="credentials">طب معنوی | معجزه لوگوتراپی<br>بنیانگذار طرح «بانوی سرنوشت‌ساز»</div></div>
+</div><div class="hint">برای چرخش کارت لمس کنید</div>
 </div>
-<div class="controls">
- <button class="control" id="flip" aria-label="چرخش کارت">↻</button>
- <button class="control share" id="share" aria-label="اشتراک‌گذاری">⌯</button>
+<div class="face back">
+<div class="back-layout">
+<div class="left"><h2>دکتر فرحناز زرین‌فر</h2><p>مشاوره · رشد فردی · توانمندسازی</p><div class="services">
+<div class="service"><strong>استعدادیابی</strong><span>استعدادیابی و رشد فردی</span></div>
+<div class="service"><strong>مشاوره خانواده</strong><span>مشاوره و همراهی خانواده</span></div>
+<div class="service"><strong>بانوی سرنوشت‌ساز</strong><span>توانمندسازی بانوان</span></div>
+<div class="service"><strong>کودکان و نوجوانان</strong><span>آموزش و توانمندسازی</span></div>
+<div class="service"><strong>کارآفرینی بانوان</strong><span>رشد مهارت و توسعه فردی</span></div>
+<div class="service"><strong>تخصص</strong><span>طب معنوی و معجزه لوگوتراپی</span></div>
+</div></div>
+<div class="contact"><div class="contact-title">تماس مستقیم</div><div class="phone">09190648767</div><div class="buttons"><a class="btn call" href="tel:09190648767">تماس</a><button class="btn copy" id="copy">کپی شماره</button></div></div>
 </div>
+</div>
+</section></div></div>
+<div class="actions"><button class="action" id="flip" aria-label="چرخش">↻</button><button class="action" id="share" aria-label="اشتراک گذاری">⌯</button></div>
 <script>
-const card=document.getElementById('card');
-const flip=document.getElementById('flip');
-const copy=document.getElementById('copy');
-const share=document.getElementById('share');
-function toggle(){card.classList.toggle('is-back')}
+const card=document.getElementById('card'),flip=document.getElementById('flip'),copy=document.getElementById('copy'),share=document.getElementById('share');
+const toggle=()=>card.classList.toggle('is-back');
 card.addEventListener('click',e=>{if(!e.target.closest('a,button'))toggle()});
 card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}});
-flip.addEventListener('click',e=>{e.stopPropagation();toggle()});
-copy.addEventListener('click',async e=>{e.stopPropagation();try{await navigator.clipboard.writeText('09190648767');copy.textContent='✓';setTimeout(()=>copy.textContent='کپی شماره',1400)}catch{copy.textContent='09190648767'}});
-share.addEventListener('click',async e=>{e.stopPropagation();try{await navigator.share({title:'دکتر فرحناز زرین‌فر',text:'کارت ویزیت دیجیتال دکتر فرحناز زرین‌فر',url:location.href})}catch{try{await navigator.clipboard.writeText(location.href);share.textContent='✓';setTimeout(()=>share.textContent='⌯',1400)}catch{}}});
+flip.onclick=e=>{e.stopPropagation();toggle()};
+copy.onclick=async e=>{e.stopPropagation();try{await navigator.clipboard.writeText('09190648767');copy.textContent='✓';setTimeout(()=>copy.textContent='کپی شماره',1200)}catch{}};
+share.onclick=async e=>{e.stopPropagation();try{await navigator.share({title:'دکتر فرحناز زرین‌فر',text:'کارت ویزیت دیجیتال دکتر فرحناز زرین‌فر',url:location.href})}catch{try{await navigator.clipboard.writeText(location.href);share.textContent='✓';setTimeout(()=>share.textContent='⌯',1200)}catch{}}};
 </script>
-</body>
-</html>
+</body></html>
